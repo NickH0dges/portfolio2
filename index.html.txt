@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick Hodges Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Nick Hodges</h1>
+        <p>Welcome to my professional portfolio! Here, you can learn more about my education, skills, and work experience.</p>
+    </header>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>I am a Cybersecurity student at Southeast Missouri State University with a minor in Networking, maintaining a 3.5 GPA. I have hands-on experience in Windows system administration, networking, and defending against active red team attacks. I am currently seeking a summer internship to apply my skills and continue growing in the field of information security.</p>
+        </section>
+        <section>
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>NIST Compliance</li>
+                <li>Windows System Administration</li>
+                <li>Network Administration</li>
+                <li>Endpoint Security</li>
+                <li>Active Directory Management</li>
+                <li>Microsoft 365 Administration</li>
+                <li>Technical Writing</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Southeast Missouri State University</strong>  
+                    <br>Bachelor of Science in Cybersecurity (August 2022 – Present)
+                    <br>Minor: Networking, GPA: 3.5
+                </li>
+                <li>
+                    <strong>Cape Girardeau Career & Technology Center</strong>  
+                    <br>Computer Networking and Security (August 2021 – May 2022)
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Work Experience</h2>
+            <div>
+                <h3>IT Help Desk | Southeast Missouri State University</h3>
+                <p><em>May 2023 – Present</em></p>
+                <ul>
+                    <li>Provided technical support to faculty, staff, and students.</li>
+                    <li>Managed account issues and common Windows problems.</li>
+                    <li>Authored Knowledge Base articles to improve support efficiency.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Information Technology Intern | Spectrum Brands</h3>
+                <p><em>May 2024 – August 2024</em></p>
+                <ul>
+                    <li>Supported employees with Windows systems and Microsoft 365 tools.</li>
+                    <li>Upgraded workstations to Windows 11 and streamlined device recycling.</li>
+                    <li>Enhanced Microsoft Autopilot provisioning process.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Networking/Telecom Intern | Cape Communications</h3>
+                <p><em>March 2023 – August 2023</em></p>
+                <ul>
+                    <li>Troubleshot and repaired PBX systems.</li>
+                    <li>Installed network infrastructure, including CAT6 cabling and RFID access control systems.</li>
+                    <li>Provided customer support for outages and technical issues.</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:nahodges02@gmail.com">nahodges02@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/nick-hodges" target="_blank">linkedin.com/in/nick-hodges</a></p>
+        </section>
+    </main>
+</body>
+</html>
