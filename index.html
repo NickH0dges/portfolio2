@@ -1,82 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nick Hodges Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Nick Hodges - Portfolio</title>
+  <style>
+    /* Body / Background */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Verdana, sans-serif;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      color: #fff;
+      text-align: center;
+
+      /* Windows 7 gradient background */
+      background: radial-gradient(circle at center, #63c9ff, #0070c9 60%, #003b70 100%);
+      position: relative;
+    }
+
+    /* SVG swoosh lines */
+    #swooshes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    /* Bubble canvas */
+    #bubbles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Header bar */
+    header {
+      padding: 2rem;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 8px rgba(255,255,255,0.8), 2px 2px 4px rgba(0,0,0,0.6);
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: inset 0 1px 4px rgba(255,255,255,0.6), 0 2px 6px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+      box-shadow: 0 0 12px rgba(0,255,255,0.7), 0 0 18px rgba(0,128,255,0.8);
+    }
+
+    section {
+      padding: 3rem 1rem;
+    }
+
+    /* Solid cards */
+    .card {
+      margin: 1rem auto;
+      padding: 2rem;
+      max-width: 700px;
+      border-radius: 20px;
+      background: #f8f9fb; /* solid white/very light gray */
+      border: 1px solid #ddd;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+      color: #000; /* black text for max readability */
+      text-shadow: none;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #003b70;
+    }
+
+    a.link-glow {
+      color: #0070c9;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a.link-glow:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Nick Hodges</h1>
-        <p>Welcome to my professional portfolio! Here, you can learn more about my education, skills, and work experience.</p>
-    </header>
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>I am a Cybersecurity student at Southeast Missouri State University with a minor in Networking, maintaining a 3.5 GPA. I have hands-on experience in Windows system administration, networking, and defending against active red team attacks. I am currently seeking a summer internship to apply my skills and continue growing in the field of information security.</p>
-        </section>
-        <section>
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>NIST Compliance</li>
-                <li>Windows System Administration</li>
-                <li>Network Administration</li>
-                <li>Endpoint Security</li>
-                <li>Active Directory Management</li>
-                <li>Microsoft 365 Administration</li>
-                <li>Technical Writing</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>Southeast Missouri State University</strong>  
-                    <br>Bachelor of Science in Cybersecurity (August 2022 – Present)
-                    <br>Minor: Networking, GPA: 3.5
-                </li>
-                <li>
-                    <strong>Cape Girardeau Career & Technology Center</strong>  
-                    <br>Computer Networking and Security (August 2021 – May 2022)
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Work Experience</h2>
-            <div>
-                <h3>IT Help Desk | Southeast Missouri State University</h3>
-                <p><em>May 2023 – Present</em></p>
-                <ul>
-                    <li>Provided technical support to faculty, staff, and students.</li>
-                    <li>Managed account issues and common Windows problems.</li>
-                    <li>Authored Knowledge Base articles to improve support efficiency.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Information Technology Intern | Spectrum Brands</h3>
-                <p><em>May 2024 – August 2024</em></p>
-                <ul>
-                    <li>Supported employees with Windows systems and Microsoft 365 tools.</li>
-                    <li>Upgraded workstations to Windows 11 and streamlined device recycling.</li>
-                    <li>Enhanced Microsoft Autopilot provisioning process.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Networking/Telecom Intern | Cape Communications</h3>
-                <p><em>March 2023 – August 2023</em></p>
-                <ul>
-                    <li>Troubleshot and repaired PBX systems.</li>
-                    <li>Installed network infrastructure, including CAT6 cabling and RFID access control systems.</li>
-                    <li>Provided customer support for outages and technical issues.</li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:nahodges02@gmail.com">nahodges02@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/nick-hodges" target="_blank">linkedin.com/in/nick-hodges</a></p>
-        </section>
-    </main>
+  <!-- SVG swoosh lines -->
+  <svg id="swooshes" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <!-- Upper swooshes -->
+    <path d="M 0 600 Q 400 300 1200 500" stroke="rgba(255,255,255,0.35)" stroke-width="2" fill="none"/>
+    <path d="M 0 500 Q 500 200 1400 400" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="none"/>
+    <path d="M 200 700 Q 800 400 1600 600" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
+
+    <!-- Lower swooshes -->
+    <path d="M 0 900 Q 600 700 1400 850" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none"/>
+    <path d="M 100 1000 Q 800 750 1600 950" stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none"/>
+  </svg>
+
+  <!-- Bubble background -->
+  <canvas id="bubbles"></canvas>
+
+  <!-- Header -->
+  <header>
+    <h1>Nick Hodges</h1>
+    <h2>nhadmin.cc</h2>
+    <p>Cybersecurity • Networking • Projects</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+      Hi! My name is Nick Hodges, and I’m currently a Cybersecurity major at 
+      <strong>Southeast Missouri State University (SEMO)</strong> with a minor in Computer Networking.
+    </p>
+    <p>
+      I’ve had a love for computers for as long as I can remember. I got my first computer when I was 
+      just three years old, but really started experimenting and tinkering around the age of eight or nine. 
+      My passion for cybersecurity began in high school, where I served as the team captain of my JROTC unit’s 
+      cybersecurity team for three years. In my senior year, I passed the captain role to a friend, but stayed 
+      deeply involved in competing and mentoring.
+    </p>
+    <p>
+      I’ve always been a Windows person at heart, and my specialty lies in <strong>hardening and securing 
+      Windows systems</strong>—from Active Directory and DNS to overall system defense. That’s where I thrive: 
+      building secure environments, locking down systems, and protecting critical infrastructure.
+    </p>
+  </section>
+
+  <!-- Projects -->
+<section id="projects" class="card">
+  <h2>Projects</h2>
+
+  <h3>PowerShell Hardening Scripts for Cyber Defense Team</h3>
+  <p>
+  Developed a set of <strong>automated PowerShell scripts</strong> used in 
+  <a href="https://semo.edu/colleges-departments/business-computing/computer-science/cybersecurity-institute/cyber-defense-team.html" target="_blank" class="link-glow">
+    collegiate cyber defense competitions
+  </a>.
+  These scripts enforce host-based firewall rules, configure system security policies, 
+  and generate Group Policy Objects (GPOs) to rapidly harden and secure Windows environments 
+  under time pressure.
+</p>
+
+  <h3>Proxmox Homelab Environment</h3>
+  <p>
+    Built and maintain a <strong>two-node Proxmox homelab</strong> hosting multiple virtual machines, 
+    including Windows Server, various client OSs, and security tools such as Wazuh, Snort, 
+    Kali Linux, and Metasploitable. This environment allows me to simulate enterprise networks, 
+    experiment with defensive monitoring, and test security workflows in realistic scenarios.
+  </p>
+  
+   <h3>Security+ Certification Preparation</h3>
+  <p>
+    Currently dedicating significant time to preparing for the <strong>CompTIA Security+ (SY0-701)</strong> certification. 
+    My focus is on mastering security fundamentals, risk management, and network defense principles 
+    through structured study sessions, practice exams, and hands-on reinforcement in my homelab. 
+    This certification effort reflects my commitment to advancing my cybersecurity knowledge and 
+    validating it with an industry-recognized credential.
+  </p>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>Email: <span class="link-glow">nahodges02@gmail.com</span></p>
+    <p>
+  LinkedIn: 
+  <a href="https://www.linkedin.com/in/nick-hodges/" target="_blank" class="link-glow">
+    linkedin.com/in/nick-hodges
+  </a>
+</p>
+
+  </section>
+
+  <script>
+    // Bubble animation
+    const canvas = document.getElementById("bubbles");
+    const ctx = canvas.getContext("2d");
+    let bubbles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Bubble {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height + Math.random() * 100;
+        this.size = Math.random() * 50 + 30; 
+        this.speed = Math.random() * 1 + 0.3;
+        this.hue = Math.random() * 360; 
+      }
+      update() {
+        this.y -= this.speed;
+        if (this.y + this.size < 0) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+
+        ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
+        ctx.fill();
+
+        ctx.strokeStyle = `hsla(${this.hue}, 90%, 60%, 0.9)`;
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        let grad = ctx.createRadialGradient(
+          this.x - this.size * 0.3,
+          this.y - this.size * 0.3,
+          this.size * 0.1,
+          this.x,
+          this.y,
+          this.size
+        );
+        grad.addColorStop(0, "rgba(255,255,255,0.8)");
+        grad.addColorStop(1, "rgba(255,255,255,0)");
+        ctx.fillStyle = grad;
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < 20; i++) {
+      bubbles.push(new Bubble());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      bubbles.forEach(bubble => {
+        bubble.update();
+        bubble.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
 </body>
 </html>
